@@ -4,7 +4,7 @@ public class Fibonacci {
 
   // recursive implementation
 
-  private static int getFibonacciRecursion(int n) {
+  public static int getFibonacciRecursion(int n) {
     if (n == 0 || n == 1) {
       return n;
     }
@@ -13,7 +13,7 @@ public class Fibonacci {
 
   // top-down dynamic programming (memoization)
 
-  private static int getFibonacciTopDown(int n) {
+  public static int getFibonacciTopDown(int n) {
     return getFibonacciTopDown(n, new int[n+1]);
   }
 
@@ -33,7 +33,7 @@ public class Fibonacci {
 
   // bottom-up dynamic programming
 
-  private static int getFibonacciBottomUp(int n) {
+  public static int getFibonacciBottomUp(int n) {
     if (n == 0 || n == 1) {
       return n;
     }
@@ -47,7 +47,7 @@ public class Fibonacci {
     return memo[n-1] + memo[n-2];
   }
 
-  private static int getFibonacciBottomUpImproved(int n) {
+  public static int getFibonacciBottomUpImproved(int n) {
     if (n == 0 || n == 1) {
       return n;
     }
@@ -61,24 +61,5 @@ public class Fibonacci {
     }
 
     return a + b;
-  }
-
-  public static void main(String args[]) {
-
-    int n = 6;
-    int result = getFibonacciRecursion(n);
-    System.out.println("fibonacci (" + n + ") = " + result);
-
-    n = 6;
-    result = getFibonacciTopDown(n);
-    System.out.println("fibonacci (" + n + ") = " + result);
-
-    n = 6;
-    result = getFibonacciBottomUp(n);
-    System.out.println("fibonacci (" + n + ") = " + result);
-
-    n = 6;
-    result = getFibonacciBottomUpImproved(n);
-    System.out.println("fibonacci (" + n + ") = " + result);
   }
 }
