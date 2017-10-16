@@ -1,10 +1,8 @@
 package com.github.engfragui.fundamentals.sort;
 
-import java.util.Arrays;
-
 public class QuickSort {
 
-  private static void quickSort(int[] array) {
+  public static void quickSort(int[] array) {
     quickSort(array, 0, array.length-1);
   }
 
@@ -47,16 +45,5 @@ public class QuickSort {
     array[pivotIndex] = temp;
 
     return pivotIndex;
-  }
-
-  public static void main(String args[]) {
-
-    int[] array = new int[] {5,2,7,8,9,4,2,6};
-
-    System.out.println("initial array = " + Arrays.toString(array));
-
-    quickSort(array);
-
-    System.out.println("final array = " + Arrays.toString(array));
   }
 }

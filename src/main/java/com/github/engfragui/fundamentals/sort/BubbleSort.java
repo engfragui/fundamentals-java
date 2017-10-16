@@ -1,13 +1,11 @@
 package com.github.engfragui.fundamentals.sort;
 
-import java.util.Arrays;
-
 /**
  * Sort an array by comparing two adjacent items and swapping them if needed
  */
 public class BubbleSort {
 
-  private static void bubbleSort(int[] array) {
+  public static void bubbleSort(int[] array) {
 
     boolean swappedOnce = true;
     int iteration = 0;
@@ -36,27 +34,6 @@ public class BubbleSort {
       }
 
       iteration++;
-      System.out.println("array after " + iteration + " iteration = " + Arrays.toString(array));
     }
-
-  }
-
-  public static void main(String args[]) {
-
-    int[] array = new int[] {5,2,7,8,9,4,2,6};
-
-    System.out.println("initial array = " + Arrays.toString(array));
-
-    bubbleSort(array);
-
-    System.out.println("final array = " + Arrays.toString(array));
-
-    array = new int[] {4,3,2,1};
-
-    System.out.println("initial array = " + Arrays.toString(array));
-
-    bubbleSort(array);
-
-    System.out.println("final array = " + Arrays.toString(array));
   }
 }
