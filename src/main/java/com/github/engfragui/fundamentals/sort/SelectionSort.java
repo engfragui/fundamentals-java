@@ -1,13 +1,11 @@
 package com.github.engfragui.fundamentals.sort;
 
-import java.util.Arrays;
-
 /**
  * Sort an array by getting the smallest item and swapping it with
  */
 public class SelectionSort {
 
-  private static void selectionSort(int[] array) {
+  public static void selectionSort(int[] array) {
 
     for (int i=0; i<array.length; i++) {
 
@@ -33,16 +31,5 @@ public class SelectionSort {
       }
     }
     return minIndex;
-  }
-
-  public static void main(String args[]) {
-
-    int[] array = new int[] {5,2,7,8,9,4,2,6};
-
-    System.out.println("initial array = " + Arrays.toString(array));
-
-    selectionSort(array);
-
-    System.out.println("final array = " + Arrays.toString(array));
   }
 }

@@ -1,13 +1,11 @@
 package com.github.engfragui.fundamentals.sort;
 
-import java.util.Arrays;
-
 /**
  * Sort an array by dividing the array in two, applying sorting on each half and then merging them together
  */
 public class MergeSort {
 
-  private static void mergeSort(int[] array) {
+  public static void mergeSort(int[] array) {
 
     int n = array.length;
 
@@ -63,16 +61,5 @@ public class MergeSort {
       j++;
       k++;
     }
-  }
-
-  public static void main(String args[]) {
-
-    int[] array = new int[] {5,2,7,8,9,4,2,6};
-
-    System.out.println("initial array = " + Arrays.toString(array));
-
-    mergeSort(array);
-
-    System.out.println("final array = " + Arrays.toString(array));
   }
 }
