@@ -2,16 +2,16 @@ package com.github.engfragui.fundamentals.datastructures;
 
 public class LinkedList<T> {
 
-  private Node<T> head;
+  private LinkedListNode<T> head;
 
   public void append(T data) {
-    Node<T> end = new Node<T>(data);
+    LinkedListNode<T> end = new LinkedListNode<T>(data);
     if (head == null) {
       head = end;
       return;
     }
 
-    Node<T> n = head;
+    LinkedListNode<T> n = head;
     while (n.getNext() != null) {
       n = n.getNext();
     }
@@ -22,7 +22,7 @@ public class LinkedList<T> {
     if (head == null) {
       throw new Exception("Cannot delete item from empty list");
     }
-    Node<T> n = head;
+    LinkedListNode<T> n = head;
     if (n.getData() == data) {
       head = head.getNext();
       return;
@@ -40,7 +40,7 @@ public class LinkedList<T> {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("[");
-    Node<T> n = head;
+    LinkedListNode<T> n = head;
     while(n != null) {
       if (sb.length()>1) {
         sb.append(",");

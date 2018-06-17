@@ -1,16 +1,16 @@
 package com.github.engfragui.fundamentals.datastructures;
 
-public class Node<T> {
+public class LinkedListNode<T> {
 
   private T data;
-  private Node<T> next;
+  private LinkedListNode<T> next;
 
-  public Node(T data) {
+  public LinkedListNode(T data) {
     this.data = data;
     this.next = null;
   }
 
-  public Node(T data, Node<T> next) {
+  public LinkedListNode(T data, LinkedListNode<T> next) {
     this.data = data;
     this.next = next;
   }
@@ -23,11 +23,11 @@ public class Node<T> {
     this.data = data;
   }
 
-  public Node<T> getNext() {
+  public LinkedListNode<T> getNext() {
     return next;
   }
 
-  public void setNext(Node<T> next) {
+  public void setNext(LinkedListNode<T> next) {
     this.next = next;
   }
 }
