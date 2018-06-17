@@ -33,9 +33,14 @@ public class StackTest {
   @Test
   public void testPeek() throws Exception {
     Stack<Integer> stack = new Stack<Integer>();
-    assertEquals(null, stack.peek());
     stack.push(10);
     assertEquals((Integer) 10, stack.peek());
+  }
+
+  @Test(expected = Exception.class)
+  public void testPeekException() throws Exception {
+    Stack<Integer> stack = new Stack<Integer>();
+    stack.peek();
   }
 
   @Test
