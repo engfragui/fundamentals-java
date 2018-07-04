@@ -12,14 +12,8 @@ public class Singleton {
 
   public static Singleton getInstance() {
     if (instance == null) {
-      System.out.println("Instantiating new singleton instance");
       instance = new Singleton();
     }
     return instance;
-  }
-
-  public static void printHashCode() {
-    Singleton singleton = Singleton.getInstance();
-    System.out.println("Singleton " + singleton.hashCode());
   }
 }
