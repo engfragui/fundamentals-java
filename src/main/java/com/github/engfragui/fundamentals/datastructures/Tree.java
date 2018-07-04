@@ -11,55 +11,75 @@ public class Tree { // TODO This should use generics
     root = insert(root, data);
   }
 
-  private TreeNode<Integer> insert(TreeNode<Integer> root, Integer data) {
-    if (root == null) {
+  private TreeNode<Integer> insert(TreeNode<Integer> node, Integer data) {
+    if (node == null) {
       return new TreeNode<Integer>(data);
     }
-    if (data < root.data) {
-      root.left = insert(root.left, data);
-    } else if (data > root.data) {
-      root.right = insert(root.right, data);
+    if (data < node.data) {
+      node.left = insert(node.left, data);
+    } else if (data > node.data) {
+      node.right = insert(node.right, data);
     }
-    return root;
+    return node;
+  }
+
+  public boolean contains(Integer data) {
+    return contains(root, data);
+  }
+
+  private boolean contains(TreeNode<Integer> node, Integer data) {
+    if (node == null) {
+      return false;
+    }
+    if (data == node.data) {
+      return true;
+    } else if (data < node.data) {
+      return contains(node.left, data);
+    } else { // data > root.data
+      return contains(node.right, data);
+    }
   }
 
   public void visitInOrder() {
     visitInOrder(root);
+    System.out.println();
   }
 
   private void visitInOrder(TreeNode<Integer> node) {
     if (node != null) {
-      this.visitInOrder(node.left);
+      visitInOrder(node.left);
       visit(node);
-      this.visitInOrder(node.right);
-    }
-  }
-
-  private void visitPreOrder(TreeNode<Integer> node) {
-    if (node != null) {
-      visit(node);
-      this.visitPreOrder(node.left);
-      this.visitPreOrder(node.right);
+      visitInOrder(node.right);
     }
   }
 
   public void visitPreOrder() {
     visitPreOrder(root);
+    System.out.println();
+  }
+
+  private void visitPreOrder(TreeNode<Integer> node) {
+    if (node != null) {
+      visit(node);
+      visitPreOrder(node.left);
+      visitPreOrder(node.right);
+    }
   }
 
   private void visitPostOrder(TreeNode<Integer> node) {
     if (node != null) {
-      this.visitPostOrder(node.left);
-      this.visitPostOrder(node.right);
+      visitPostOrder(node.left);
+      visitPostOrder(node.right);
       visit(node);
     }
   }
 
   public void visitPostOrder() {
     visitPostOrder(root);
+    System.out.println();
   }
 
-  public void visit(TreeNode<Integer> node) {
+  private void visit(TreeNode<Integer> node) {
     System.out.print(node.data + ", ");
   }
 
