@@ -1,5 +1,10 @@
 package com.github.engfragui.fundamentals.sort;
 
+/**
+ * Sort an array by choosing a pivot element and swapping elements at the left with elements at the right
+ * until elements at the left are smaller than the pivot, and elements at the right are bigger.
+ * Runtime: O(n log(n)). Memory: O(log(n)).
+ */
 public class QuickSort {
 
   public static void quickSort(int[] array) {

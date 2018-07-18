@@ -1,7 +1,8 @@
 package com.github.engfragui.fundamentals.sort;
 
 /**
- * Sort an array by comparing two adjacent items and swapping them if needed
+ * Sort an array by comparing two adjacent items and swapping them if needed.
+ * Runtime: O(n^2). Memory: O(1).
  */
 public class BubbleSort {
 

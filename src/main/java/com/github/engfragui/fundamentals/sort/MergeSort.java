@@ -1,7 +1,8 @@
 package com.github.engfragui.fundamentals.sort;
 
 /**
- * Sort an array by dividing the array in two, applying sorting on each half and then merging them together
+ * Sort an array by dividing the array in two, applying sorting on each half and then merging them together.
+ * Runtime: O(n log(n)). Memory: depends.
  */
 public class MergeSort {
 

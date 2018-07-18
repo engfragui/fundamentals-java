@@ -5,6 +5,7 @@ import java.util.PriorityQueue;
 /**
  * Created by fguiducci on 6/30/18.
  */
+// Java representation for heaps
 public class PriorityQueueUsage {
 
   public static void main(String[] args) {

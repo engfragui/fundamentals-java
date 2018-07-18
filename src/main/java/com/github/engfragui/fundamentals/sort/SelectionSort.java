@@ -1,7 +1,8 @@
 package com.github.engfragui.fundamentals.sort;
 
 /**
- * Sort an array by getting the smallest item and swapping it with
+ * Sort an array by getting the smallest item and move it to the front of the array.
+ * Runtime: O(n^2). Memory: O(1).
  */
 public class SelectionSort {
 
