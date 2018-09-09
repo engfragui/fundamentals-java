@@ -22,6 +22,7 @@ public class Graph {
     d.addToAdjacents(s);
   }
 
+  // DFS
   public boolean hasPathDepthFirst(int source, int destination) {
     GraphNode s = getNode(source);
     GraphNode d = getNode(destination);
@@ -45,6 +46,7 @@ public class Graph {
     return false;
   }
 
+  // BFS
   public boolean hasPathBreathFirst(int source, int destination) {
     return hasPathBreathFirst(getNode(source), getNode(destination));
   }

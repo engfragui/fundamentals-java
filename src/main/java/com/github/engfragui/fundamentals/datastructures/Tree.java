@@ -1,5 +1,8 @@
 package com.github.engfragui.fundamentals.datastructures;
 
+import java.util.Queue;
+import java.util.LinkedList;
+
 /**
  * Created by fguiducci on 6/25/18.
  */
@@ -57,7 +60,6 @@ public class Tree { // TODO This should use generics
   // DFS pre order traversal
   public void visitPreOrder() {
     visitPreOrder(root);
-    System.out.println();
   }
 
   private void visitPreOrder(TreeNode<Integer> node) {
@@ -71,7 +73,6 @@ public class Tree { // TODO This should use generics
   // DFS post order traversal
   public void visitPostOrder() {
     visitPostOrder(root);
-    System.out.println();
   }
 
   private void visitPostOrder(TreeNode<Integer> node) {
@@ -84,12 +85,23 @@ public class Tree { // TODO This should use generics
 
   // BFS level order traversal
   public void visitLevelOrder() {
-    visitLevelOrder(root);
-    System.out.println();
-  }
+    Queue<TreeNode<Integer>> queue = new LinkedList<TreeNode<Integer>>();
+    queue.add(root);
 
-  private void visitLevelOrder(TreeNode<Integer> node) {
-    // TODO to be implemented with queue
+    while (!queue.isEmpty()) {
+      TreeNode<Integer> node = queue.poll(); // extract head of the queue
+      visit(node);
+
+      // enqueue left child if it exists
+      if (node.left != null) {
+        queue.add(node.left);
+      }
+
+      // enqueue right child if it exists
+      if (node.right != null) {
+        queue.add(node.right);
+      }
+    }
   }
 
   private void visit(TreeNode<Integer> node) {

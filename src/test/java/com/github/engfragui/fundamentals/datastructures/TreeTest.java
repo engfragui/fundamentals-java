@@ -61,7 +61,7 @@ public class TreeTest {
     tree.insert(17);
     tree.insert(1);
     tree.visitPreOrder();
-    assertEquals("20, 2, 1, 4, 8, 17, 50, \n", outContent.toString());
+    assertEquals("20, 2, 1, 4, 8, 17, 50, ", outContent.toString());
   }
 
   @Test
@@ -77,6 +77,22 @@ public class TreeTest {
     tree.insert(17);
     tree.insert(1);
     tree.visitPostOrder();
-    assertEquals("1, 17, 8, 4, 2, 50, 20, \n", outContent.toString());
+    assertEquals("1, 17, 8, 4, 2, 50, 20, ", outContent.toString());
+  }
+
+  @Test
+  public void testVisitLevelOrder() throws Exception {
+    ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    System.setOut(new PrintStream(outContent));
+    Tree tree = new Tree();
+    tree.insert(20);
+    tree.insert(2);
+    tree.insert(50);
+    tree.insert(4);
+    tree.insert(8);
+    tree.insert(17);
+    tree.insert(1);
+    tree.visitLevelOrder();
+    assertEquals("20, 2, 50, 1, 4, 8, 17, ", outContent.toString());
   }
 }
