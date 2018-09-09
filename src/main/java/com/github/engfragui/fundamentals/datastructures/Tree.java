@@ -40,6 +40,7 @@ public class Tree { // TODO This should use generics
     }
   }
 
+  // DFS in order traversal
   public void visitInOrder() {
     visitInOrder(root);
     System.out.println();
@@ -53,6 +54,7 @@ public class Tree { // TODO This should use generics
     }
   }
 
+  // DFS pre order traversal
   public void visitPreOrder() {
     visitPreOrder(root);
     System.out.println();
@@ -66,6 +68,12 @@ public class Tree { // TODO This should use generics
     }
   }
 
+  // DFS post order traversal
+  public void visitPostOrder() {
+    visitPostOrder(root);
+    System.out.println();
+  }
+
   private void visitPostOrder(TreeNode<Integer> node) {
     if (node != null) {
       visitPostOrder(node.left);
@@ -74,9 +82,14 @@ public class Tree { // TODO This should use generics
     }
   }
 
-  public void visitPostOrder() {
-    visitPostOrder(root);
+  // BFS level order traversal
+  public void visitLevelOrder() {
+    visitLevelOrder(root);
     System.out.println();
+  }
+
+  private void visitLevelOrder(TreeNode<Integer> node) {
+    // TODO to be implemented with queue
   }
 
   private void visit(TreeNode<Integer> node) {
