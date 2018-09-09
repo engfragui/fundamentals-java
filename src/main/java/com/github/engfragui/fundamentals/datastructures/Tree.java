@@ -87,16 +87,13 @@ public class Tree { // TODO This should use generics
   public void visitLevelOrder() {
     Queue<TreeNode<Integer>> queue = new LinkedList<TreeNode<Integer>>();
     queue.add(root);
-
     while (!queue.isEmpty()) {
       TreeNode<Integer> node = queue.poll(); // extract head of the queue
       visit(node);
-
       // enqueue left child if it exists
       if (node.left != null) {
         queue.add(node.left);
       }
-
       // enqueue right child if it exists
       if (node.right != null) {
         queue.add(node.right);
