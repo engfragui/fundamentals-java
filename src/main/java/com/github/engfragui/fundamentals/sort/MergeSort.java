@@ -8,21 +8,19 @@ public class MergeSort {
 
   public static void mergeSort(int[] array) {
 
-    int n = array.length;
-
-    if (n<2) {
+    if (array.length<2) {
       return;
     }
 
-    int m = n/2;
-    int[] leftArray = new int[m];
-    int[] rightArray = new int[n-m];
+    int middle = array.length/2;
+    int[] leftArray = new int[middle];
+    int[] rightArray = new int[array.length-middle];
 
     // copy first half of array into leftArray
-    System.arraycopy(array, 0, leftArray, 0, m);
+    System.arraycopy(array, 0, leftArray, 0, middle);
 
     // copy second half of array into rightArray
-    System.arraycopy(array, m, rightArray, 0, array.length - m);
+    System.arraycopy(array, middle, rightArray, 0, array.length - middle);
 
     mergeSort(leftArray);
     mergeSort(rightArray);

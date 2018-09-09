@@ -3,7 +3,6 @@ package com.github.engfragui.fundamentals.recursion;
 public class Fibonacci {
 
   // recursive implementation
-
   public static int getFibonacciRecursion(int n) {
     if (n == 0 || n == 1) {
       return n;
@@ -12,7 +11,6 @@ public class Fibonacci {
   }
 
   // top-down dynamic programming (memoization)
-
   public static int getFibonacciTopDown(int n) {
     return getFibonacciTopDown(n, new int[n+1]);
   }
@@ -32,7 +30,6 @@ public class Fibonacci {
   }
 
   // bottom-up dynamic programming
-
   public static int getFibonacciBottomUp(int n) {
     if (n == 0 || n == 1) {
       return n;
@@ -47,6 +44,7 @@ public class Fibonacci {
     return memo[n-1] + memo[n-2];
   }
 
+  // bottom-up dynamic programming (improved)
   public static int getFibonacciBottomUpImproved(int n) {
     if (n == 0 || n == 1) {
       return n;
@@ -61,5 +59,11 @@ public class Fibonacci {
     }
 
     return a + b;
+  }
+
+  // iterative implementation
+  public static int getFibonacciIterative(int n) {
+    // TODO implement
+    return n;
   }
 }

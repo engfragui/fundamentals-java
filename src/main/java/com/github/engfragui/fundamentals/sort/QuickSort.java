@@ -33,7 +33,7 @@ public class QuickSort {
       // compare array[i] with pivot element, if array[i] <= pivot swap array[i] with array[pivotIndex]
       if (array[i] <= pivot) {
 
-        // swap array[i] array[pivotIndex]
+        // swap array[i] with array[pivotIndex]
         int temp = array[i];
 
         array[i] = array[pivotIndex];

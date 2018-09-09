@@ -25,5 +25,10 @@ public class FibonacciTest {
   public void tesFibonacciBottomUpImproved() throws Exception {
     assertEquals(8, Fibonacci.getFibonacciBottomUpImproved(6));
   }
+
+  @Test
+  public void testFibonacciIterative() throws Exception {
+    assertEquals(8, Fibonacci.getFibonacciIterative(6));
+  }
 }
 

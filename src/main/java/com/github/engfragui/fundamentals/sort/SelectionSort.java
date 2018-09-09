@@ -8,16 +8,14 @@ public class SelectionSort {
 
   public static void selectionSort(int[] array) {
 
-    for (int i=0; i<array.length; i++) {
+    for (int i=0; i<array.length - 1; i++) {
 
       // get index with min item
       int minIndex = getMinIndex(array, i);
 
       // swap minIndex with current element
       if (minIndex != i) {
-        int temp = array[i];
-        array[i] = array[minIndex];
-        array[minIndex] = temp;
+        swapItems(array, i, minIndex);
       }
     }
   }
@@ -32,5 +30,11 @@ public class SelectionSort {
       }
     }
     return minIndex;
+  }
+
+  private static void swapItems(int[] array, int index1, int index2) {
+    int temp = array[index1];
+    array[index1] = array[index2];
+    array[index2] = temp;
   }
 }
