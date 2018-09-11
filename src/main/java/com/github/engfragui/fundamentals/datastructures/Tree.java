@@ -46,7 +46,6 @@ public class Tree { // TODO This should use generics
   // DFS in order traversal
   public void visitInOrder() {
     visitInOrder(root);
-    System.out.println();
   }
 
   private void visitInOrder(TreeNode<Integer> node) {

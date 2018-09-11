@@ -45,7 +45,7 @@ public class TreeTest {
     tree.insert(17);
     tree.insert(1);
     tree.visitInOrder();
-    assertEquals("1, 2, 4, 8, 17, 20, 50, \n", outContent.toString());
+    assertEquals("1, 2, 4, 8, 17, 20, 50, ", outContent.toString());
   }
 
   @Test
