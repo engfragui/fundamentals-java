@@ -9,7 +9,7 @@ public class BinarySearch {
     return recursiveBinarySearch(sortedArray, key, sortedArray[0], sortedArray[sortedArray.length - 1]);
   }
 
-  public static int recursiveBinarySearch(int[] sortedArray, int key, int low, int high) {
+  private static int recursiveBinarySearch(int[] sortedArray, int key, int low, int high) {
     if (high < low) {
       return -1;
     }
