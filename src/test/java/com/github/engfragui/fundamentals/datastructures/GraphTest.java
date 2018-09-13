@@ -48,7 +48,7 @@ public class GraphTest {
     graph.addEgde(3,6);
     graph.addEgde(4,5);
     graph.addEgde(5,6);
-    assertTrue(graph.hasPathDepthFirst(1,6));
+    assertTrue(graph.hasPathDepthFirst(1,4));
   }
 
   @Test
@@ -89,6 +89,6 @@ public class GraphTest {
     graph.addEgde(3,6);
     graph.addEgde(4,5);
     graph.addEgde(5,6);
-    assertTrue(graph.hasPathBreathFirst(1,6));
+    assertTrue(graph.hasPathBreathFirst(1,4));
   }
 }

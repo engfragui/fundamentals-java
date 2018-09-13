@@ -5,11 +5,11 @@ package com.github.engfragui.fundamentals;
  */
 public class BinarySearch {
 
-  public static int binarySearch(int[] sortedArray, int key) {
-    return binarySearch(sortedArray, key, sortedArray[0], sortedArray[sortedArray.length-1]);
+  public static int recursiveBinarySearch(int[] sortedArray, int key) {
+    return recursiveBinarySearch(sortedArray, key, sortedArray[0], sortedArray[sortedArray.length - 1]);
   }
 
-  public static int binarySearch(int[] sortedArray, int key, int low, int high) {
+  public static int recursiveBinarySearch(int[] sortedArray, int key, int low, int high) {
     if (high < low) {
       return -1;
     }
@@ -20,10 +20,33 @@ public class BinarySearch {
       return middle;
 
     } else if (key < sortedArray[middle]) {
-      return binarySearch(sortedArray, key, low, middle - 1);
+      return recursiveBinarySearch(sortedArray, key, low, middle - 1);
 
     } else {
-      return binarySearch(sortedArray, key, middle + 1, high);
+      return recursiveBinarySearch(sortedArray, key, middle + 1, high);
     }
+  }
+
+  public static int iterativeBinarySearch(int[] sortedArray, int key) {
+    int start = 0;
+    int end = sortedArray.length - 1;
+
+    while (start <= end) {
+      int middle = (start + end) / 2;
+
+      if (key < sortedArray[middle]) {
+        end = middle - 1;
+      }
+
+      if (key > sortedArray[middle]) {
+        start = middle + 1;
+      }
+
+      if (key == sortedArray[middle]) {
+        return middle;
+      }
+    }
+    return -1;
+
   }
 }

@@ -30,9 +30,6 @@ public class Graph {
   }
 
   private void depthFirstSearch(GraphNode source, HashSet<Integer> visited) {
-    if (source == null) {
-      return;
-    }
     visit(source);
     visited.add(source.getId());
     for (GraphNode adjacent : source.getAdjacents()) {
