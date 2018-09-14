@@ -1,5 +1,6 @@
-package com.github.engfragui.fundamentals.recursion;
+package com.github.engfragui.fundamentals.famousproblems;
 
+import com.github.engfragui.fundamentals.famousproblems.Fibonacci;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

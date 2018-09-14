@@ -1,4 +1,4 @@
-package com.github.engfragui.fundamentals.recursion;
+package com.github.engfragui.fundamentals.famousproblems;
 
 public class Fibonacci {
 
