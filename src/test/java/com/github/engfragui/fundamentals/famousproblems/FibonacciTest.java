@@ -7,23 +7,23 @@ import static org.junit.Assert.assertEquals;
 public class FibonacciTest {
 
   @Test
-  public void tesFibonacciRecursion() throws Exception {
+  public void testFibonacciRecursion() throws Exception {
     assertEquals(8, Fibonacci.getFibonacciRecursion(6));
   }
 
   @Test
-  public void tesFibonacciTopDown() throws Exception {
+  public void testFibonacciTopDown() throws Exception {
     assertEquals(8, Fibonacci.getFibonacciTopDown(6));
   }
 
   @Test
-  public void tesFibonacciBottomUp() throws Exception {
+  public void testFibonacciBottomUp() throws Exception {
     assertEquals(8, Fibonacci.getFibonacciBottomUp(6));
   }
 
   @Test
-  public void tesFibonacciBottomUpImproved() throws Exception {
-    assertEquals(8, Fibonacci.getFibonacciBottomUpImproved(6));
+  public void testFibonacciIterative() throws Exception {
+    assertEquals(8, Fibonacci.getFibonacciIterative(6));
   }
 }
 

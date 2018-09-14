@@ -44,9 +44,8 @@ public class Fibonacci {
     return memo[n-1] + memo[n-2];
   }
 
-  // bottom-up dynamic programming (improved)
-  // this is also the iterative solution
-  public static int getFibonacciBottomUpImproved(int n) {
+  // iterative solution
+  public static int getFibonacciIterative(int n) {
     if (n == 0 || n == 1) {
       return n;
     }
