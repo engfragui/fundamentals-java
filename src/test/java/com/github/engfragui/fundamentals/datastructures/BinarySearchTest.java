@@ -1,4 +1,4 @@
-package com.github.engfragui.fundamentals;
+package com.github.engfragui.fundamentals.datastructures;
 
 import org.junit.Test;
 

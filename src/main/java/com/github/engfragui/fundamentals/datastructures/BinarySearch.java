@@ -1,4 +1,4 @@
-package com.github.engfragui.fundamentals;
+package com.github.engfragui.fundamentals.datastructures;
 
 /**
  * Created by fguiducci on 8/25/18.

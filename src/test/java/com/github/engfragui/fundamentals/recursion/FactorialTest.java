@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class FactorialTest {
 
   @Test
-  public void tesFactorialRecursion() throws Exception {
+  public void testFactorialRecursion() throws Exception {
     assertEquals(720, Factorial.getFactorialRecursion(6));
   }
 
