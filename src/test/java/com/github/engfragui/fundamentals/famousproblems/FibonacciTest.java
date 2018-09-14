@@ -1,6 +1,5 @@
 package com.github.engfragui.fundamentals.famousproblems;
 
-import com.github.engfragui.fundamentals.famousproblems.Fibonacci;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -25,11 +24,6 @@ public class FibonacciTest {
   @Test
   public void tesFibonacciBottomUpImproved() throws Exception {
     assertEquals(8, Fibonacci.getFibonacciBottomUpImproved(6));
-  }
-
-  @Test
-  public void testFibonacciIterative() throws Exception {
-    assertEquals(8, Fibonacci.getFibonacciIterative(6));
   }
 }
 

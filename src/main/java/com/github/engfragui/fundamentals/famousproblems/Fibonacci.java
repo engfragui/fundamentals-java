@@ -45,6 +45,7 @@ public class Fibonacci {
   }
 
   // bottom-up dynamic programming (improved)
+  // this is also the iterative solution
   public static int getFibonacciBottomUpImproved(int n) {
     if (n == 0 || n == 1) {
       return n;
@@ -59,11 +60,5 @@ public class Fibonacci {
     }
 
     return a + b;
-  }
-
-  // iterative implementation
-  public static int getFibonacciIterative(int n) {
-    // TODO implement
-    return n;
   }
 }
