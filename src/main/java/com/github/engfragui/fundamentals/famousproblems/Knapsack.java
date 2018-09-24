@@ -12,7 +12,12 @@ package com.github.engfragui.fundamentals.famousproblems;
  */
 public class Knapsack {
 
-  public static int knapsackRecursion(int W, int wt[], int val[], int n) {
+  public static int knapsackRecursion(int W, int wt[], int val[]) {
+    return knapsackRecursion(W, wt, val, wt.length);
+    // note: we assume that wt.length == val.length
+  }
+
+  private static int knapsackRecursion(int W, int wt[], int val[], int n) {
 
     if (n == 0 || W == 0) {
       return 0;
@@ -27,13 +32,17 @@ public class Knapsack {
     // Return the maximum of two cases:
     // (1) nth item included
     // (2) not included
-
     return Math.max(val[n-1] + knapsackRecursion(W-wt[n-1], wt, val, n-1),
         knapsackRecursion(W, wt, val, n-1)
     );
   }
 
-  public static int knapsackIterative(int W, int wt[], int val[], int n) {
+  public static int knapsackIterative(int W, int wt[], int val[]) {
+    return knapsackIterative(W, wt, val, wt.length);
+    // note: we assume that wt.length == val.length
+  }
+
+  private static int knapsackIterative(int W, int wt[], int val[], int n) {
     int i, w;
     int K[][] = new int[n+1][W+1];
 

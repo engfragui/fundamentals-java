@@ -8,14 +8,18 @@ import java.util.concurrent.Executors;
  */
 public class ExecutorServiceUsage {
 
-  public static void printSampleString() {
+  private static void printSampleString() {
     System.out.println("Hello World | " + Thread.currentThread());
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
   }
 
   public static void main(String[] args) {
-    int n = 10;
-    ExecutorService executorService = Executors.newFixedThreadPool(n);
-    for (int i = 0; i < n; i++) {
+    ExecutorService executorService = Executors.newFixedThreadPool(10);
+    for (int i = 0; i < 50; i++) {
       executorService.submit(ExecutorServiceUsage::printSampleString);
     }
     executorService.shutdown();
