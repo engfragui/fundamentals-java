@@ -54,7 +54,7 @@ public class Graph {
       return false;
     }
     visited.add(source.getId());
-      for (GraphNode adjacent : source.getAdjacents()) {
+    for (GraphNode adjacent : source.getAdjacents()) {
       if (hasPathDepthFirst(adjacent, destination, visited)) {
         return true;
       }
