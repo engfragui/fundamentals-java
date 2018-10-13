@@ -2,6 +2,7 @@ package com.github.engfragui.fundamentals.datastructures;
 
 import java.util.*;
 import java.util.LinkedList;
+import java.util.HashMap;
 
 public class Graph {
   private HashMap<Integer, GraphNode> nodeLookup = new HashMap<Integer, GraphNode>();
