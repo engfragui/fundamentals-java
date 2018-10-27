@@ -18,6 +18,10 @@ public class DequeUsage {
     deque.add(3);
     deque.add(10);
     System.out.println(deque.getFirst());
+    System.out.println(deque.removeFirst());
+    System.out.println(deque.getFirst());
+    System.out.println(deque.getLast());
+    System.out.println(deque.removeLast());
     System.out.println(deque.getLast());
   }
 }
