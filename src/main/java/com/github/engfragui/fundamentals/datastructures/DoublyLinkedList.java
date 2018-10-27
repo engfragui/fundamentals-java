@@ -1,5 +1,8 @@
 package com.github.engfragui.fundamentals.datastructures;
 
+/**
+ * Implementation of a doubly linked list based on Node class
+ */
 public class DoublyLinkedList<T> {
 
   private DoublyLinkedNode<T> head;
@@ -42,6 +45,7 @@ public class DoublyLinkedList<T> {
     }
   }
 
+  // this method is used only to test this class
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("[");
