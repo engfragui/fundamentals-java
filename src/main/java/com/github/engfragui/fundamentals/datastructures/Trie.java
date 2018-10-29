@@ -1,8 +1,6 @@
 package com.github.engfragui.fundamentals.datastructures;
 
 import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
 
 // https://www.baeldung.com/trie-java
 public class Trie {
