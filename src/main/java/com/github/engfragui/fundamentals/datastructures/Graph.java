@@ -1,13 +1,13 @@
 package com.github.engfragui.fundamentals.datastructures;
 
-import java.util.*;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.HashMap;
 
-public class Graph {
-  private HashMap<Integer, GraphNode> nodeLookup = new HashMap<Integer, GraphNode>();
+public abstract class Graph {
+  protected HashMap<Integer, GraphNode> nodeLookup = new HashMap<Integer, GraphNode>();
 
-  private GraphNode getNode(int id) {
+  protected GraphNode getNode(int id) {
     return nodeLookup.get(id);
   }
 
@@ -16,12 +16,7 @@ public class Graph {
     nodeLookup.put(id, node);
   }
 
-  public void addEgde(int source, int destination) {
-    GraphNode s = getNode(source);
-    GraphNode d = getNode(destination);
-    s.addToAdjacents(d);
-    d.addToAdjacents(s);
-  }
+  abstract void addEgde(int source, int destination);
 
   // DFS
   public void depthFirstSearch(int source) {
@@ -108,11 +103,13 @@ public class Graph {
     return false;
   }
 
-  private void visit(GraphNode node) {
+  abstract void topologicalSort() throws Exception;
+
+  protected void visit(GraphNode node) {
     System.out.print(node.getId() + ", ");
   }
 
-  private class GraphNode {
+  protected class GraphNode {
 
     private int id;
     private java.util.LinkedList<GraphNode> adjacents = new java.util.LinkedList<GraphNode>();
