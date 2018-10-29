@@ -3,9 +3,6 @@ package com.github.engfragui.fundamentals.datastructures;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by fguiducci on 6/25/18.
- */
 public class HashMap {
 
   private final static int TABLE_SIZE = 128;

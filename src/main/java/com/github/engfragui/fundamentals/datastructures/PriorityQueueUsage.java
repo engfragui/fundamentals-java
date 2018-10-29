@@ -2,9 +2,6 @@ package com.github.engfragui.fundamentals.datastructures;
 
 import java.util.PriorityQueue;
 
-/**
- * Created by fguiducci on 6/30/18.
- */
 // Java representation for heaps
 public class PriorityQueueUsage {
 

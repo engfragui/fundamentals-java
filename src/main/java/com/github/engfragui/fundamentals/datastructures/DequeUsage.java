@@ -3,9 +3,6 @@ package com.github.engfragui.fundamentals.datastructures;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-/**
- * Created by fguiducci on 6/30/18.
- */
 // Java implementation of double ended queue
 public class DequeUsage {
 

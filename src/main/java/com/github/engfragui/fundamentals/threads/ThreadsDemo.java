@@ -1,8 +1,5 @@
 package com.github.engfragui.fundamentals.threads;
 
-/**
- * Created by fguiducci on 9/18/18.
- */
 public class ThreadsDemo {
 
   public static class MyThread extends Thread {

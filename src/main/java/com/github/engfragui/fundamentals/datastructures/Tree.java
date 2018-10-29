@@ -3,9 +3,6 @@ package com.github.engfragui.fundamentals.datastructures;
 import java.util.Queue;
 import java.util.LinkedList;
 
-/**
- * Created by fguiducci on 6/25/18.
- */
 public class Tree { // TODO This should use generics
 
   private TreeNode<Integer> root;

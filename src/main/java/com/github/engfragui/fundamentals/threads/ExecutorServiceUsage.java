@@ -3,9 +3,6 @@ package com.github.engfragui.fundamentals.threads;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
- * Created by fguiducci on 6/30/18.
- */
 public class ExecutorServiceUsage {
 
   private static void printSampleString() {

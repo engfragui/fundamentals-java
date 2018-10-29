@@ -4,9 +4,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 
-/**
- * Created by fguiducci on 6/30/18.
- */
 public class ComparatorUsage {
 
   public static void main(String[] args) {

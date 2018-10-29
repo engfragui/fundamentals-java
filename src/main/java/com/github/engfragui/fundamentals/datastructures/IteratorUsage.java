@@ -5,9 +5,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-/**
- * Created by fguiducci on 6/30/18.
- */
 // Usage of both Iterator and ListIterator
 public class IteratorUsage {
 

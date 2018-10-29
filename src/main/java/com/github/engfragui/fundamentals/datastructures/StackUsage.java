@@ -1,8 +1,5 @@
 package com.github.engfragui.fundamentals.datastructures;
 
-/**
- * Created by fguiducci on 6/30/18.
- */
 // Java implementation of stack
 public class StackUsage {
 

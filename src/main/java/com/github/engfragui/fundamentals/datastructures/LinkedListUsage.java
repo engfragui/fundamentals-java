@@ -1,8 +1,5 @@
 package com.github.engfragui.fundamentals.datastructures;
 
-/**
- * Created by fguiducci on 6/30/18.
- */
 // Java representation for stacks (kinda)
 public class LinkedListUsage {
 
