@@ -1,6 +1,11 @@
 package com.github.engfragui.fundamentals.datastructures;
 
-// Java implementation of stack
+/**
+ * Java implementation of Stack (LIFO policy)
+ *
+ * In general, Deque should be used instead of Stack
+ * From Java docs: "A more complete and consistent set of LIFO stack operations is provided by the Deque"
+ */
 public class StackUsage {
 
   public static void main(String[] args) throws Exception {

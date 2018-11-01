@@ -3,7 +3,13 @@ package com.github.engfragui.fundamentals.datastructures;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-// Java implementation of double ended queue
+/**
+ * Java implementation of "double ended queue"
+ * It can be used as a queue for FIFO policy or as a stack for LIFO policy
+ *
+ * In general, Deque should be used instead of Stack
+ * From Java docs: "This interface should be used in preference to the legacy Stack class"
+ */
 public class DequeUsage {
 
   public static void main(String[] args) {
