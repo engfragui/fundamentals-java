@@ -1,5 +1,7 @@
 package com.github.engfragui.fundamentals.datastructures;
 
+import java.util.Stack;
+
 /**
  * Java implementation of Stack (LIFO policy)
  *

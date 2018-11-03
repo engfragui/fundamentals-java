@@ -1,5 +1,11 @@
 package com.github.engfragui.fundamentals.datastructures;
 
+/**
+ * Implementation of Queue
+ *
+ * Add (enqueue) at the end of the queue
+ * Remove (dequeue) at the front of the queue
+ */
 public class Queue<T> {
 
   private QueueNode<T> first;
