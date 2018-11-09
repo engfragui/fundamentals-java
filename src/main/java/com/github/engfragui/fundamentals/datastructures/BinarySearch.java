@@ -1,6 +1,9 @@
 package com.github.engfragui.fundamentals.datastructures;
 
-// O(log n) complexity
+/**
+ * O(log n) complexity
+ * Based on the fact that the array is already sorted
+ */
 public class BinarySearch {
 
   public static int recursiveBinarySearch(int[] sortedArray, int key) {
@@ -45,6 +48,5 @@ public class BinarySearch {
       }
     }
     return -1;
-
   }
 }

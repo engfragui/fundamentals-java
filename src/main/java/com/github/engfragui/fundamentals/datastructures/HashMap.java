@@ -6,9 +6,10 @@ import java.util.List;
 public class HashMap {
 
   private final static int TABLE_SIZE = 128;
-  List<HashMapEntry>[] table;
+  private List<HashMapEntry>[] table;
+
   public HashMap() {
-    table = new ArrayList[TABLE_SIZE]; // ?
+    table = new ArrayList[TABLE_SIZE];
   }
 
   public Integer get(int key) {

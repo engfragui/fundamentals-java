@@ -109,7 +109,7 @@ public abstract class Graph {
     System.out.print(node.getId() + ", ");
   }
 
-  protected class GraphNode {
+  public class GraphNode {
 
     private int id;
     private java.util.LinkedList<GraphNode> adjacents = new java.util.LinkedList<GraphNode>();

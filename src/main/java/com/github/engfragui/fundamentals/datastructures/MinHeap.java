@@ -2,6 +2,12 @@ package com.github.engfragui.fundamentals.datastructures;
 
 import java.util.Arrays;
 
+/**
+ * peek() - O(1)
+ * poll() - O(log n)
+ * add() - O(log n)
+ * delete() - O(log n)
+ */
 public class MinHeap { // TODO This should use generics
   int capacity = 10;
   int size = 0;
