@@ -30,7 +30,7 @@ public class Queue<T> {
 
   public T remove() throws Exception {
     if (isEmpty()) {
-      throw new Exception("Cannot extract item if stack is empty");
+      throw new Exception("Cannot extract item if queue is empty");
     }
     T data = first.getData();
     first = first.getNext();
@@ -39,7 +39,7 @@ public class Queue<T> {
 
   public T peek() throws Exception {
     if (isEmpty()) {
-      throw new Exception("Cannot peek item if stack is empty");
+      throw new Exception("Cannot peek if queue is empty");
     }
     return first.getData();
   }

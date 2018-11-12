@@ -43,7 +43,7 @@ public class Queue2<T> {
 
     // If oldStack is empty then error
     if (oldStack.isEmpty()) {
-      throw new Exception("Cannot extract item if stack is empty");
+      throw new Exception("Cannot extract item if queue is empty");
     }
 
     // pop an item from oldStack and return it
@@ -52,7 +52,7 @@ public class Queue2<T> {
 
   public T peek() throws Exception {
     if (oldStack.isEmpty()) {
-      throw new Exception("Cannot peek item if stack is empty");
+      throw new Exception("Cannot peek if queue is empty");
     }
 
     return oldStack.peek();

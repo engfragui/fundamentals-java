@@ -28,8 +28,8 @@ public class Queue3<T> {
   public T remove() throws Exception {
 
     // if both stacks are empty then error
-    if (oldStack.isEmpty() && newStack.isEmpty()) {
-      throw new Exception("Cannot extract item if stack is empty");
+    if (isEmpty()) {
+      throw new Exception("Cannot extract item if queue is empty");
     }
 
     // if oldStack is empty, push everything from newStack to oldStack
@@ -45,8 +45,8 @@ public class Queue3<T> {
   }
 
   public T peek() throws Exception {
-    if (oldStack.isEmpty() && newStack.isEmpty()) {
-      throw new Exception("Cannot peek item if stack is empty");
+    if (isEmpty()) {
+      throw new Exception("Cannot peek if queue is empty");
     }
 
     // if oldStack is empty, push everything from newStack to oldStack
