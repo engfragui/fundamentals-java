@@ -7,7 +7,7 @@ package com.github.engfragui.fundamentals.datastructures;
 public class BinarySearch {
 
   public static int recursiveBinarySearch(int[] sortedArray, int key) {
-    return recursiveBinarySearch(sortedArray, key, sortedArray[0], sortedArray[sortedArray.length - 1]);
+    return recursiveBinarySearch(sortedArray, key, 0, sortedArray.length - 1);
   }
 
   private static int recursiveBinarySearch(int[] sortedArray, int key, int low, int high) {

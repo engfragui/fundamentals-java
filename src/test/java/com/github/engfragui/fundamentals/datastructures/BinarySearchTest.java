@@ -9,18 +9,34 @@ import static org.junit.Assert.assertEquals;
 public class BinarySearchTest {
 
   @Test
-  public void testRecursiveBinarySearch() throws Exception {
-    int[] sortedArray = new int[]{1,2,3,4,5,6,7,8,9};
-    int key = 3;
+  public void testRecursiveBinarySearchSuccessful() throws Exception {
+    int[] sortedArray = new int[]{1,3,5,9,20,48};
+    int key = 20;
     int position = BinarySearch.recursiveBinarySearch(sortedArray, key);
-    assertEquals(Arrays.binarySearch(sortedArray, key), position);
+    assertEquals(4, position);
   }
 
   @Test
-  public void testIterativeBinarySearch() throws Exception {
-    int[] sortedArray = new int[]{1,2,3,4,5,6,7,8,9};
-    int key = 3;
+  public void testRecursiveBinarySearchFailed() throws Exception {
+    int[] sortedArray = new int[]{1,3,5,9,20,48};
+    int key = 21;
+    int position = BinarySearch.recursiveBinarySearch(sortedArray, key);
+    assertEquals(-1, position);
+  }
+
+  @Test
+  public void testIterativeBinarySearchSuccessful() throws Exception {
+    int[] sortedArray = new int[]{1,3,5,9,20,48};
+    int key = 20;
     int position = BinarySearch.iterativeBinarySearch(sortedArray, key);
-    assertEquals(Arrays.binarySearch(sortedArray, key), position);
+    assertEquals(4, position);
+  }
+
+  @Test
+  public void testIterativeBinarySearchFailed() throws Exception {
+    int[] sortedArray = new int[]{1,3,5,9,20,48};
+    int key = 21;
+    int position = BinarySearch.iterativeBinarySearch(sortedArray, key);
+    assertEquals(-1, position);
   }
 }
