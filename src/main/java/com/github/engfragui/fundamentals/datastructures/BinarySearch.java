@@ -10,21 +10,21 @@ public class BinarySearch {
     return recursiveBinarySearch(sortedArray, key, 0, sortedArray.length - 1);
   }
 
-  private static int recursiveBinarySearch(int[] sortedArray, int key, int low, int high) {
-    if (high < low) {
+  private static int recursiveBinarySearch(int[] sortedArray, int key, int lowIndex, int highIndex) {
+    if (highIndex < lowIndex) {
       return -1;
     }
 
-    int middle = (low + high)/2;
+    int middleIndex = (lowIndex + highIndex)/2;
 
-    if (key == sortedArray[middle]) {
-      return middle;
+    if (key == sortedArray[middleIndex]) {
+      return middleIndex;
 
-    } else if (key < sortedArray[middle]) {
-      return recursiveBinarySearch(sortedArray, key, low, middle - 1);
+    } else if (key < sortedArray[middleIndex]) {
+      return recursiveBinarySearch(sortedArray, key, lowIndex, middleIndex - 1);
 
     } else {
-      return recursiveBinarySearch(sortedArray, key, middle + 1, high);
+      return recursiveBinarySearch(sortedArray, key, middleIndex + 1, highIndex);
     }
   }
 
